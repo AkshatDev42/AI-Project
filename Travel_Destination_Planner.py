@@ -122,7 +122,6 @@ def get_best_reports():
     
     return []
 
-top_reports = get_best_reports()
 def display_report_to_user():
     
     
@@ -149,5 +148,18 @@ def display_report_to_user():
         for i in range(len(report["mismatched"])):
             print(f"{i + 1}. {report["mismatched"][i]}")
             
+        if(cnt != len(top_reports)):
+            continue_watching = input("Do you want to see the next destination?")
             
+            if(continue_watching == "No" or continue_watching == "N"):
+                break
         
+            cnt += 1
+            
+            
+            
+  
+  
+generate_reports()
+top_reports = get_best_reports()
+display_report_to_user()
