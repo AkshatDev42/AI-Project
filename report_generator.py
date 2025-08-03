@@ -1,85 +1,75 @@
-#This is a function to generate report of single destination
-def generate_match_report(user, destination):
+def generate_match_report(user, destination, weights):
+    # Filter: Check location type (local/foreign)
     if destination["type"] != user["location_type"]:
         return None
-    
-    if user["location_type"] != "local" and destination["visa_required"] and not user["has_visa"]:
+
+    # Filter: Visa requirement (if foreign and user has no visa)
+    if user["location_type"] == "foreign" and destination["visa_required"] and not user["has_visa"]:
         return None
-    
+
     report = {
         "name": destination["name"],
         "score": 0,
-        "cost_per_person": 0,
+        "cost_per_person": destination["cost_per_person"],
         "matched": [],
         "mismatched": []
     }
-    
+
     score = 0
-    
-    # Budget Checking
-    if destination["cost_per_person"][0] <= user["budget"] or destination["cost_per_person"][1] <= user["budget"]:
-        score += 10
-        report["matched"].append(f"Within Your Budget Usually: {destination["cost_per_person"][0]} to {destination["cost_per_person"][1]}")
+
+    # Budget Match
+    min_cost, max_cost = destination["cost_per_person"]
+    if min_cost <= user["budget"] or max_cost <= user["budget"]:
+        score += weights.get("budget", 0)
+        report["matched"].append(f"Within Your Budget: ₹{min_cost} - ₹{max_cost}")
     else:
-        diff = destination["cost_per_person"][0] - user["budget"]
-        report["mismatched"].append(f"Not Within Budget, If you can manage extra per person: {diff}")
-    
-    # Group type checking
+        extra = min_cost - user["budget"]
+        report["mismatched"].append(f"Budget Issue: Needs approx ₹{extra} extra")
+
+    # Group Type Match
     if user["group_type"] in destination["group_type"]:
-        score += 10
-        report["matched"].append(f"Ideal for visiting for {user['group_type']} travel")
+        score += weights.get("group_type", 0)
+        report["matched"].append(f"Suitable for {user['group_type']} travelers")
     else:
-        report["mismatched"].append(f"Not much ideal for {user['group_type']} travel")
-    
-    # Visa Checking 
+        report["mismatched"].append(f"Not ideal for {user['group_type']} travelers")
+
+    # Purpose Match
+    if user["purpose"].lower() in [p.lower() for p in destination["purpose"]]:
+        score += weights.get("purpose", 0)
+        report["matched"].append(f"Perfect for {user['purpose']} purposes")
+    else:
+        report["mismatched"].append(f"Not ideal for {user['purpose']} purpose")
+
+    # Month Match
+    month = user["month"]
+    if month in destination["ideal_months"]:
+        score += weights.get("month", 0)
+        reason = destination.get("month_reasons", {}).get(month, "Best time to visit")
+        report["matched"].append(f"Ideal month: {month} ({reason})")
+
+    if month in destination.get("not_ideal_months", []):
+        score -= 5  # You can customize penalty
+        reason = destination.get("month_reasons", {}).get(month, "Weather or activity limitations")
+        report["mismatched"].append(f"Not ideal in {month}: {reason}")
+
+    # Visa Note (Informational only — filtering was done earlier)
     if user["location_type"] == "foreign":
         if destination["visa_required"]:
-            if user["has_visa"]:
-                report["matched"].append("Visa requirement fulfilled")
-            else:
-                report["mismatched"].append("Visa required but not available")  # This won't execute due to early return
+            report["matched"].append("Visa required – You have it ✅")
         else:
             report["matched"].append("No visa required")
-        
-    # Location Type Checking
-    if destination["type"] == "foreign":
-        report["matched"].append("Foreign destination")
-    else:
-        report["matched"].append("Local destination")
 
-
-    # Purpose Checking
-    if user["purpose"] in [p.lower() for p in destination["purpose"]]:  # Normalize case
-        score += 10
-        report["matched"].append(f"Ideal location for {user['purpose']}")
-    else:
-        report["mismatched"].append(f"Not ideal location for {user['purpose']}")
-    
-    # Month Checking
-    if user["month"] in destination["ideal_months"]:
-        score += 10
-        report["matched"].append(f"Ideal for visit in {user["month"]}: {destination["month_reasons"].get(user["month"])}")
-    
-    if user["month"] in destination["not_ideal_months"]:
-        score -= 10
-        report["mismatched"].append(f"Not ideal for visit in {user['month']}: {destination["month_reasons"].get(user["month"])}")
-    
-    #Add the final score to the report
+    # Final Score
     report["score"] = score
-    
-    
-    #Add the cost per person 
-    report["cost_per_person"] = destination["cost_per_person"]
-    return report    
+    return report
 
 
-
-def generate_reports(user, destinations):
+def generate_reports(user, destinations, weights):
     reports = []
-    for dest in destinations:
-        report = generate_match_report(user, dest)
+
+    for destination in destinations:
+        report = generate_match_report(user, destination, weights)
         if report:
             reports.append(report)
 
     return reports
-            

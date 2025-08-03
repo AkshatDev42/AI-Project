@@ -1,3 +1,5 @@
+from user_weights_input import get_weight_preferences
+
 def get_user_input():
     print("Please answer a few questions: \n")
 
@@ -51,11 +53,12 @@ def get_user_input():
         else:
             print(f"Invalid month. Please enter a valid month like 'March' or 'October'.")
 
+
     return {
         "location_type": location_type,
         "has_visa": has_visa,
         "budget": budget,
         "group_type": group_type,
         "purpose": purpose,
-        "month": month,
+        "month": month
     }
