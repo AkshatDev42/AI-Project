@@ -26,7 +26,7 @@ def get_user_input():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-    valid_group_types = ["solo", "family", "friends", "partner", "senior"]
+    valid_group_types = ["solo", "family", "friends"]
     while True:
         group_type = input("Who are you travelling with? (solo/family/friends/partner/senior): ").strip().lower()
         if group_type in valid_group_types:

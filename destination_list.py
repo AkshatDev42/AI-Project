@@ -17,7 +17,8 @@ destinations = [
             "July": "Monsoon season, poor outdoor conditions",
             "August": "Continued monsoon rains, not ideal for tourists",
             "September": "Monsoon ends late, still wet and humid"
-        }
+        },
+        "places_to_visit": ["Baga Beach", "Fort Aguada", "Dudhsagar Falls", "Anjuna Market"]
     },
     {
         "name": "Manali",
@@ -37,7 +38,8 @@ destinations = [
             "December": "Heavy snowfall, some roads may be closed",
             "January": "Very cold and harsh winter conditions",
             "February": "Cold with occasional snowfall"
-        }
+        },
+        "places_to_visit": ["Solang Valley", "Rohtang Pass", "Hadimba Temple", "Mall Road"]
     },
     {
         "name": "Jaipur",
@@ -58,7 +60,8 @@ destinations = [
             "July": "Monsoon rains begin, humid weather",
             "August": "Wet and humid, low tourist activity",
             "September": "End of monsoon, still humid"
-        }
+        },
+        "places_to_visit": ["Amber Fort", "Hawa Mahal", "City Palace", "Jantar Mantar"]
     },
     {
         "name": "Ladakh",
@@ -82,7 +85,8 @@ destinations = [
             "April": "Slow thaw, some areas inaccessible",
             "October": "Cold begins, short season ends",
             "November": "Start of winter, difficult travel"
-        }
+        },
+        "places_to_visit": ["Pangong Lake", "Nubra Valley", "Magnetic Hill", "Leh Palace"]
     },
     {
         "name": "Dubai",
@@ -103,7 +107,8 @@ destinations = [
             "July": "Very hot and humid",
             "August": "Peak summer heat, avoid outdoor",
             "September": "Still very hot and humid"
-        }
+        },
+        "places_to_visit": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah", "Desert Safari"]
     },
     {
         "name": "Thailand",
@@ -126,7 +131,8 @@ destinations = [
             "August": "Rain and humidity continue",
             "September": "Rainy and humid",
             "October": "Rainy, flooding risk"
-        }
+        },
+        "places_to_visit": ["Phuket", "Bangkok Grand Palace", "Chiang Mai", "Phi Phi Islands"]
     },
     {
         "name": "Bali",
@@ -148,7 +154,8 @@ destinations = [
             "October": "Start of rainy season",
             "November": "Rain increases",
             "December": "Peak rainy season"
-        }
+        },
+        "places_to_visit": ["Ubud", "Tanah Lot Temple", "Tegallalang Rice Terrace", "Kuta Beach"]
     },
     {
         "name": "Sikkim",
@@ -169,7 +176,8 @@ destinations = [
             "December": "Cold and foggy",
             "January": "Very cold, snow possible",
             "February": "Cold weather continues"
-        }
+        },
+        "places_to_visit": ["Tsomgo Lake", "Nathula Pass", "Gangtok", "Rumtek Monastery"]
     },
     {
         "name": "Andaman Islands",
@@ -192,7 +200,8 @@ destinations = [
             "July": "Heavy rainfall, not suitable for tourists",
             "August": "Monsoon continues, avoid water activities",
             "September": "Monsoon tapering off, still wet"
-        }
+        },
+        "places_to_visit": ["Radhanagar Beach", "Cellular Jail", "Havelock Island", "Neil Island"]
     },
     {
         "name": "Singapore",
@@ -212,6 +221,7 @@ destinations = [
             "November": "Heavy rain and humidity",
             "December": "Frequent thunderstorms",
             "January": "Cool but wet weather"
-        }
+        },
+        "places_to_visit": ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island", "Orchard Road"]
     }
 ]
