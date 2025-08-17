@@ -5,9 +5,12 @@ def show_all_destinations(destinations):
     destination_names = [dest["name"] for dest in destinations]
 
     for name in destination_names:
-        print(f"{i}. {name}")
+        print(f"{i}. {name}", end = ((20 - len(name)) * " "))    
+        if i % 3 == 0:
+            print()
         i += 1
-
+        
+    print()
     return destination_names
 
 

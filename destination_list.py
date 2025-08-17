@@ -223,5 +223,219 @@ destinations = [
             "January": "Cool but wet weather"
         },
         "places_to_visit": ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island", "Orchard Road"]
+    },
+    {
+        "name": "Rajasthan Desert Safari",
+        "type": "local",
+        "cost_per_person": [8000, 15000],
+        "group_type": ["family", "friends"],
+        "visa_required": False,
+        "purpose": ["Culture", "Adventure", "Relaxation"],
+        "ideal_months": ["October", "November", "December", "January", "February"],
+        "not_ideal_months": ["May", "June", "July", "August", "September"],
+        "month_reasons": {
+            "October": "Cooler desert nights, pleasant tours",
+            "November": "Cultural festivals and camel fairs",
+            "December": "Peak tourist time with great weather",
+            "January": "Cool climate, desert camps popular",
+            "February": "Mild weather, good for sightseeing",
+            "May": "Scorching hot, avoid daytime travel",
+            "June": "Extreme heat",
+            "July": "Humidity and monsoon showers",
+            "August": "Humid, not ideal",
+            "September": "Heat lingers, uncomfortable"
+        },
+        "places_to_visit": ["Jaisalmer Fort", "Sam Sand Dunes", "Camel Safari", "Desert Camp"]
+    },
+    {
+        "name": "Varanasi",
+        "type": "local",
+        "cost_per_person": [6000, 12000],
+        "group_type": ["solo", "family"],
+        "visa_required": False,
+        "purpose": ["Culture", "Relaxation"],
+        "ideal_months": ["October", "November", "December", "January", "February", "March"],
+        "not_ideal_months": ["May", "June", "July", "August"],
+        "month_reasons": {
+            "October": "Cool season starts, pleasant weather",
+            "November": "Festivals and Ganga Mahotsav",
+            "December": "Cool and calm, spiritual atmosphere",
+            "January": "Cold mornings, perfect for ghats",
+            "February": "Comfortable climate, less crowded",
+            "March": "Mild weather",
+            "May": "Hot and humid",
+            "June": "Scorching heat",
+            "July": "Monsoon showers",
+            "August": "Heavy rain and humidity"
+        },
+        "places_to_visit": ["Ganga Ghats", "Kashi Vishwanath Temple", "Sarnath", "Ramnagar Fort"]
+    },
+    {
+        "name": "Mysore",
+        "type": "local",
+        "cost_per_person": [7000, 13000],
+        "group_type": ["family", "friends"],
+        "visa_required": False,
+        "purpose": ["Culture", "Relaxation"],
+        "ideal_months": ["October", "November", "December", "January", "February"],
+        "not_ideal_months": ["June", "July", "August"],
+        "month_reasons": {
+            "October": "Dussehra festival, cultural events",
+            "November": "Pleasant weather for sightseeing",
+            "December": "Cool and tourist-friendly",
+            "January": "Comfortable climate",
+            "February": "Mild and breezy",
+            "June": "Heavy rains",
+            "July": "Wet and humid",
+            "August": "Monsoon continues"
+        },
+        "places_to_visit": ["Mysore Palace", "Chamundi Hills", "Brindavan Gardens", "St. Philomena’s Church"]
+    },
+    {
+        "name": "Paris",
+        "type": "foreign",
+        "cost_per_person": [80000, 120000],
+        "group_type": ["family", "friends", "solo"],
+        "visa_required": True,
+        "purpose": ["Culture", "Luxury", "Relaxation"],
+        "ideal_months": ["April", "May", "June", "September", "October"],
+        "not_ideal_months": ["December", "January", "February"],
+        "month_reasons": {
+            "April": "Spring blossoms, fewer tourists",
+            "May": "Warm and pleasant",
+            "June": "Perfect for sightseeing",
+            "September": "Autumn charm, mild weather",
+            "October": "Cultural events and cool weather",
+            "December": "Cold, holiday rush",
+            "January": "Very cold, fewer activities",
+            "February": "Chilly and wet"
+        },
+        "places_to_visit": ["Eiffel Tower", "Louvre Museum", "Notre Dame", "Seine River Cruise"]
+    },
+    {
+        "name": "New York",
+        "type": "foreign",
+        "cost_per_person": [100000, 150000],
+        "group_type": ["family", "friends"],
+        "visa_required": True,
+        "purpose": ["Culture", "Luxury", "Relaxation"],
+        "ideal_months": ["April", "May", "June", "September", "October"],
+        "not_ideal_months": ["January", "February", "December"],
+        "month_reasons": {
+            "April": "Spring starts, ideal weather",
+            "May": "Pleasant and lively",
+            "June": "Summer fun and events",
+            "September": "Fall season, great for Central Park",
+            "October": "Cool and festive",
+            "December": "Crowded holiday season, cold",
+            "January": "Freezing, snowstorms",
+            "February": "Cold and harsh"
+        },
+        "places_to_visit": ["Statue of Liberty", "Central Park", "Times Square", "Empire State Building"]
+    },
+    {
+        "name": "Tokyo",
+        "type": "foreign",
+        "cost_per_person": [90000, 130000],
+        "group_type": ["family", "friends", "solo"],
+        "visa_required": True,
+        "purpose": ["Culture", "Luxury", "Adventure"],
+        "ideal_months": ["March", "April", "May", "October", "November"],
+        "not_ideal_months": ["July", "August"],
+        "month_reasons": {
+            "March": "Cherry blossoms begin",
+            "April": "Peak cherry blossom season",
+            "May": "Pleasant climate, less crowded",
+            "October": "Mild and autumn festivals",
+            "November": "Cool weather and autumn leaves",
+            "July": "Hot and humid",
+            "August": "Very hot, typhoon season"
+        },
+        "places_to_visit": ["Tokyo Tower", "Shibuya Crossing", "Sensoji Temple", "Disneyland Tokyo"]
+    },
+    {
+        "name": "Hong Kong",
+        "type": "foreign",
+        "cost_per_person": [60000, 90000],
+        "group_type": ["family", "friends"],
+        "visa_required": True,
+        "purpose": ["Luxury", "Culture", "Relaxation"],
+        "ideal_months": ["October", "November", "December", "January"],
+        "not_ideal_months": ["June", "July", "August", "September"],
+        "month_reasons": {
+            "October": "Pleasant weather, start of season",
+            "November": "Cool and less humid",
+            "December": "Festive and lively",
+            "January": "Cool and ideal for sightseeing",
+            "June": "Very hot and humid",
+            "July": "Rainy and typhoon season",
+            "August": "Stormy and humid",
+            "September": "Monsoon tail, humid"
+        },
+        "places_to_visit": ["Victoria Peak", "Disneyland", "Ocean Park", "Star Ferry"]
+    },
+    {
+        "name": "Switzerland",
+        "type": "foreign",
+        "cost_per_person": [120000, 180000],
+        "group_type": ["family", "friends", "solo"],
+        "visa_required": True,
+        "purpose": ["Nature", "Luxury", "Adventure"],
+        "ideal_months": ["May", "June", "July", "August", "September"],
+        "not_ideal_months": ["December", "January", "February"],
+        "month_reasons": {
+            "May": "Spring bloom, pleasant weather",
+            "June": "Great for hiking and sightseeing",
+            "July": "Summer fun, mountain trails open",
+            "August": "Warm and scenic",
+            "September": "Autumn charm",
+            "December": "Very cold, ski-only activities",
+            "January": "Freezing and snowy",
+            "February": "Harsh winter, limited travel"
+        },
+        "places_to_visit": ["Zurich", "Lucerne", "Interlaken", "Matterhorn"]
+    },
+    {
+        "name": "Bali",
+        "type": "foreign",
+        "cost_per_person": [70000, 110000],
+        "group_type": ["family", "friends", "solo"],
+        "visa_required": True,
+        "purpose": ["Nature", "Adventure", "Relaxation"],
+        "ideal_months": ["April", "May", "June", "July", "September"],
+        "not_ideal_months": ["December", "January", "February"],
+        "month_reasons": {
+            "April": "Dry season starts, warm and sunny",
+            "May": "Pleasant weather, fewer tourists",
+            "June": "Perfect for beaches and temples",
+            "July": "Festival season, lively atmosphere",
+            "September": "Sunny and less crowded",
+            "December": "Rainy and humid",
+            "January": "Heavy rainfall, storms",
+            "February": "Wet and less travel-friendly"
+        },
+        "places_to_visit": ["Ubud", "Tanah Lot", "Seminyak", "Mount Batur"]
+    },
+    {
+        "name": "Dubai",
+        "type": "foreign",
+        "cost_per_person": [60000, 100000],
+        "group_type": ["family", "friends"],
+        "visa_required": True,
+        "purpose": ["Luxury", "Adventure", "Relaxation"],
+        "ideal_months": ["November", "December", "January", "February", "March"],
+        "not_ideal_months": ["June", "July", "August", "September"],
+        "month_reasons": {
+            "November": "Cooler evenings, shopping festivals",
+            "December": "Festive lights, pleasant days",
+            "January": "Perfect for outdoor activities",
+            "February": "Mild and breezy",
+            "March": "Spring vibes, comfortable climate",
+            "June": "Extremely hot, avoid outdoors",
+            "July": "Scorching heat",
+            "August": "Very humid",
+            "September": "Hot and humid"
+        },
+        "places_to_visit": ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah", "Desert Safari"]
     }
 ]

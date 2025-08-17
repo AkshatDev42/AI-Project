@@ -28,7 +28,7 @@ def get_user_input():
 
     valid_group_types = ["solo", "family", "friends"]
     while True:
-        group_type = input("Who are you travelling with? (solo/family/friends/partner/senior): ").strip().lower()
+        group_type = input("Who are you travelling with? (solo/family/friends): ").strip().lower()
         if group_type in valid_group_types:
             break
         else:

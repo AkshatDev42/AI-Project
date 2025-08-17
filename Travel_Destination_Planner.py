@@ -4,20 +4,22 @@ from report_generator import generate_reports
 from report_utils import get_best_reports
 from report_utils import display_report_to_user
 from user_weights_input import get_weight_preferences
-from console_ui import show_header
+from console_ui import show_header, show_footer
 from destination_utils import show_all_destinations, compare_destinations, get_suggestions_month, get_suggestions_budget
 
 def main():
     show_header()
 
     while True:
+        print()
+        print()
         print("📌 Main Menu")
         print("1. Plan a Destination")
         print("2. Get Suggestions Based on Month")
         print("3. Get Suggestions Based on Budget")
         print("4. Compare Destinations")
         print("5. Exit")
-        choice = input("\nEnter your choice (1-4): ").strip()
+        choice = input("\nEnter your choice (1-5): ").strip()
 
         if choice == "1":
             weights = get_weight_preferences()
@@ -87,7 +89,7 @@ def main():
 
 
         elif choice == "5":
-            print("\n👋 Goodbye!\n")
+            show_footer()
             break
 
 
